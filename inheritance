@@ -1,0 +1,26 @@
+
+
+public class Vehicle {
+  public int currentSpeed;
+  public int numberOfWheels;
+  public int yearManufactured;
+
+  public Vehicle(int currentSpeed, int numberOfWheels, int yearManufactured) {
+    this.currentSpeed = currentSpeed;
+    this.numberOfWheels = numberOfWheels;
+    this.yearManufactured = yearManufactured;
+  }
+
+  public void accelerate() {
+    this.currentSpeed++;
+  }
+}
+
+public class Car extends Vehicle {
+  public int yearModel;
+
+  public Car(int currentSpeed, int numberOfWheels, int yearManufactured, int yearModel) {
+    super(currentSpeed, numberOfWheels, yearManufactured);
+    this.yearModel = yearModel;
+  }
+}
