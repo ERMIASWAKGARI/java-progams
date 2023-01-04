@@ -1,0 +1,59 @@
+𝐋𝐔: Interface:
+
+//An interface declaration
+public interface Car {
+    //A constant field
+    public static final String name = "BMW";
+  
+    //An abstract method
+    public void drive();
+}
+
+public class BMW implements Car {
+  // implement the abstract method
+  public void drive(){ 
+    System.out.println("Driving a BMW"); 
+  }
+  
+  public static void main(String args) {
+    BMW myCar = new BMW();
+    myCar.drive();
+    System.out.println("Car Name: " + Car.name);
+  }
+  
+}
+
+Abstract Class:
+
+// Declaration of an abstract class
+public abstract class Vehicle {
+  
+  // An abstract method
+  public abstract void move();
+  
+  // A Regular method
+  public void displayDetails() {
+    System.out.println("This is a Vehicle.");
+  }
+  
+}
+
+// Subclass extending the abstract class 
+public class Car extends Vehicle {
+  // implementing the Abstract method @Override
+  public void move() {
+    System.out.println("Car is Moving.");
+  }
+  
+  // This method is specific to Car class
+  public void displayType() {
+    System.out.println("This is a Car");
+  } 
+  
+  public static void main(String args) {
+    Car c = new Car();
+    c.move();
+    c.displayDetails();
+    c.displayType();
+  }
+}
