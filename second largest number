@@ -1,0 +1,30 @@
+
+
+package com.mycompany.secondlargest;
+
+public class SecondLargest {
+
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+        int [] a=new int[]{1,6,4,3,2};
+        int max=0;
+          int secMax=0;
+        for(int i=0;i<a.length; i++){
+            if(a[i]>max){
+                max=a[i];
+                 
+            }
+        }
+            System.out.println("The maximum is : "+max);
+             for(int i=0;i<a.length;i++){
+                   
+                if(a[i]>secMax && a[i]<max){
+              secMax=a[i];
+                     }
+                
+                 }
+              System.out.println("The second maximum value is : "+secMax);
+            }
+        }
+    
+
